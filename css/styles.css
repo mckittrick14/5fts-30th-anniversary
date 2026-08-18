@@ -72,6 +72,34 @@ body {
     letter-spacing: 1px;
 }
 
+/* Navigation menu */
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0 8px;
+    transition: color 0.2s;
+}
+
+.nav a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+.nav {
+    color: #ffffff;
+}
+
+.map-link {
+    color: #003366;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.map-link:hover {
+    color: #ffcc00;
+}
+
 /* Schedule Timeline */
 .section-title {
     text-align: center;
