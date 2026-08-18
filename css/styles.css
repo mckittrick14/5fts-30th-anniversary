@@ -33,6 +33,12 @@ body {
     margin: 0 auto;
 }
 
+.main-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px 40px 20px;
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
@@ -88,6 +94,30 @@ body {
 
 .nav {
     color: #ffffff;
+    margin-top: 15px;
+}
+
+.btn-link {
+    display: inline-block;
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-link:hover {
+    background-color: #e0b400;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #e1e8ed;
 }
 
 .map-link {
