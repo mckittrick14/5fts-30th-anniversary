@@ -79,6 +79,7 @@ body {
     /* Subtle underline accent */
     padding-bottom: 4px;
 }
+
 /* Nav Link Buttons */
 .nav a {
     display: inline-block;
@@ -235,44 +236,36 @@ footer {
         grid-template-columns: 1fr;
     }
 
-/* Hotel Card Flex Layout */
-.flex-row-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid var(--bg-gray);
-    padding-bottom: 12px;
-    margin-bottom: 15px;
-}
-
-.flex-row-sub {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-}
-
-.rate-info {
-    font-size: 0.95rem;
-    font-weight: 400;
-    color: var(--text-dark);
-}
-
-.phone-badge {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--primary-blue);
-    background-color: var(--light-gold);
-    padding: 4px 10px;
-    border-radius: 6px;
-    white-space: nowrap;
-}
-
-@media (max-width: 600px) {
-    .flex-row-header, .flex-row-sub {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+    /* Hotel Card Flex Layout */
+    .flex-row-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid var(--bg-gray);
+        padding-bottom: 12px;
+        margin-bottom: 15px;
     }
-}    
+
+    .flex-row-sub {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .rate-info {
+        font-size: 0.95rem;
+        font-weight: 400;
+        color: var(--text-dark);
+    }
+
+    @media (max-width: 600px) {
+
+        .flex-row-header,
+        .flex-row-sub {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+    }
 }
