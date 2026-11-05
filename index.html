@@ -26,6 +26,65 @@
         </section>
         <div class="badge">June 2–4, 2027 • Vance AFB, OK</div>
 
+        <!-- Reunion Countdown Timer -->
+        <div class="countdown-container"
+            style="background: var(--primary-blue, #001689); color: #ffffff; padding: 25px 15px; border-radius: 10px; text-align: center; max-width: 650px; margin: 20px auto; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+            <h3
+                style="margin-top: 0; font-size: 1.25rem; letter-spacing: 1px; text-transform: uppercase; color: #f4c430;">
+                Countdown to the 30th Reunion
+            </h3>
+            <div id="countdown" style="display: flex; justify-content: center; gap: 15px; margin-top: 15px;">
+                <div class="time-block"
+                    style="flex: 1; max-width: 90px; background: rgba(255, 255, 255, 0.1); padding: 10px; border-radius: 6px;">
+                    <span id="days" style="display: block; font-size: 2rem; font-weight: bold;">--</span>
+                    <small style="font-size: 0.75rem; text-transform: uppercase; color: #ddd;">Days</small>
+                </div>
+                <div class="time-block"
+                    style="flex: 1; max-width: 90px; background: rgba(255, 255, 255, 0.1); padding: 10px; border-radius: 6px;">
+                    <span id="hours" style="display: block; font-size: 2rem; font-weight: bold;">--</span>
+                    <small style="font-size: 0.75rem; text-transform: uppercase; color: #ddd;">Hours</small>
+                </div>
+                <div class="time-block"
+                    style="flex: 1; max-width: 90px; background: rgba(255, 255, 255, 0.1); padding: 10px; border-radius: 6px;">
+                    <span id="minutes" style="display: block; font-size: 2rem; font-weight: bold;">--</span>
+                    <small style="font-size: 0.75rem; text-transform: uppercase; color: #ddd;">Minutes</small>
+                </div>
+                <div class="time-block"
+                    style="flex: 1; max-width: 90px; background: rgba(255, 255, 255, 0.1); padding: 10px; border-radius: 6px;">
+                    <span id="seconds" style="display: block; font-size: 2rem; font-weight: bold;">--</span>
+                    <small style="font-size: 0.75rem; text-transform: uppercase; color: #ddd;">Seconds</small>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            (function () {
+                // Target Date: June 2, 2027 at 08:00 AM CST
+                const targetDate = new Date("June 2, 2027 08:00:00").getTime();
+
+                const timer = setInterval(function () {
+                    const now = new Date().getTime();
+                    const difference = targetDate - now;
+
+                    if (difference < 0) {
+                        clearInterval(timer);
+                        document.getElementById("countdown").innerHTML = "<h4 style='color:#f4c430;'>The Reunion is Here! Welcome Back Kittens!</h4>";
+                        return;
+                    }
+
+                    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                    document.getElementById("days").innerText = days;
+                    document.getElementById("hours").innerText = hours;
+                    document.getElementById("minutes").innerText = minutes;
+                    document.getElementById("seconds").innerText = seconds;
+                }, 1000);
+            })();
+        </script>
+
         <nav class="nav">
             <a href="index.html">Home</a>
             <a href="hotels.html">Travel Info</a>
